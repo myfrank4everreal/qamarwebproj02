@@ -29,7 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = "django-insecure-r3kht6l7bz$b8x9kl+*)i%xpg)b%m+x^ci5%s&3jdeya!1$#@l"
+SECRET_KEY = "ACCESS_KEY"
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -85,12 +86,22 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+NAME = os.environ.get("NAME")
+USER = os.environ.get("USER")
+PASSWORD = os.environ.get("PASSWORD")
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': NAME,
+        'USER': USER,
+        'PASSWORD': PASSWORD,
+        'HOST': 'ec2-3-211-6-217.compute-1.amazonaws.com'
     }
 }
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
