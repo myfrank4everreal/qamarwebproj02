@@ -3,7 +3,8 @@ from django.shortcuts import render
 
 
 def index(requests):
-    return render(requests, 'webapp/index.html')
+    context = {}
+    return render(requests, 'webapp/index.html', context)
 
 
 
