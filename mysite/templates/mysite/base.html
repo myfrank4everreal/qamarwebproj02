@@ -21,32 +21,36 @@
         <main class="flex-shrink-0">
             <!--top nav end-->
             
-            <div class="py-2 bg-light  text-dark">
+            <div class="py-2 topcontact_new">
                 <div class="container py-1">
                   <div class="row ">
                     <div class="col-lg-4 ml-auto">
-                        <a class="navbar-bran ml-0 mr-0 px-0" href="{% url 'index' %}"><img src="{% static 'webapp/images/logo1.png' %}" class='logo'></a>
+                      <li class="list-inline-item  "><a class="reset-anchor fw-bolder" href="mailto:gerijeru1@gmail.com"><i class="fa fa-email "></i>gerijeru1@gmail.com</a></li><span><i class="far fa-envelope"></i></span>
+                      <li class="list-inline-item "><a class="reset-anchor fw-bolder" href="callto:+971582280571">+971582280571</a></li><span><i class="fa fa-phone"></i></span>
+                      
+                        <!-- <a class="navbar-bran ml-0 mr-0 px-0" href="{% url 'index' %}"><img src="{% static 'webapp/images/logo1.png' %}" class='logo'></a> -->
                     </div>
-                    <div class="col-lg-8 d-lg-block text-center ">
+                    <div class="col-lg-8 d-lg-block ml-auto topcontact_social">
 
-                      <ul class="list-inline mb-0 small topcontact ">        
+                      <ul class="list-inline mb-0 small ">        
                         <li class="list-inline-item"><a class="reset-anchor" href="https://www.facebook.com/presictravels"><i class="fab fa-facebook-f"></i></a></li>
                         <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-twitter"></i></a></li>
                         <li class="list-inline-item"><a class="reset-anchor" href="https://api.whatsapp.com/send?phone=+971568071655"><i class="fab fa-whatsapp"></i></a></li>
-                        {% comment %} <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-instagram"></i></a></li> {% endcomment %}
-                        {% comment %} <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-linkedin"></i></a></li> {% endcomment %}
-                        <li class="list-inline-item  "><a class="reset-anchor fw-bolder" href="mailto:gerijeru1@gmail.com"><i class="fa fa-email "></i>gerijeru1@gmail.com</a></li><span><i class="far fa-envelope"></i></span>
-                        {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
+                        <!-- {% comment %} <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-instagram"></i></a></li> {% endcomment %}
+                        {% comment %} <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-linkedin"></i></a></li> {% endcomment %} -->
+                       
+
+                        <!-- {% comment %} {% if request.user.is_authenticated %} {% endcomment %} -->
         
-                        {% comment %} {% else %}
+                        <!-- {% comment %} {% else %}
                         <li class="list-inline-item "><a class="reset-anchor" href=""><h6>login</h6></a></li> 
                         <li class="list-inline-item " ><a class="reset-anchor" href=""><h6>post job</h6></a></li> 
-                        {% endif %} {% endcomment %}
+                        {% endif %} {% endcomment %} -->
                         
-                        <li class="list-inline-item "><a class="reset-anchor fw-bolder" href="callto:+971582280571">+971582280571</a></li><span><i class="fa fa-phone"></i></span>
                         
-                        {% comment %} <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-youtube"></i></a></li>  {% endcomment %}
-                        {% comment %} <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-vimeo-v"></i></a></li> {% endcomment %}
+                        
+                        <!-- <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-youtube"></i></a></li>
+                       <li class="list-inline-item"><a class="reset-anchor" href="#"><i class="fab fa-vimeo-v"></i></a></li> -->
                       </ul>
                     </div>
         
@@ -60,38 +64,42 @@
               </div>
               <!--top nav end-->
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="{% url 'index' %}"></a>
-                    
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-                        <ul class="navbar-nav  mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
-                            
-                            {% comment %} <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                    <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
-                                    <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-                                </ul>
-                            </li> {% endcomment %}
+           
 
-                            {% comment %} <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                                    {% comment %} <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
-                                    <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li> 
-                                </ul>
-                            </li> {% endcomment %}
-                        </ul>
-                    </div>
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                  <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                  <img src='{%  static "webapp/images/logo-items.png" %}' % alt="">                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                      <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{% url 'services' %}">Services</a></li>
+                      <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
+                      
+                      {% comment %} <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                              <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
+                              <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
+                          </ul>
+                      </li> {% endcomment %}
+
+                      {% comment %} <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+                          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                              {% comment %} <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
+                              <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li> 
+                          </ul>
+                      </li> {% endcomment %}
+                  </ul>
+                  </div>
                 </div>
-            </nav>
+              </nav>
 
             {% block content %}
 
